@@ -4,11 +4,9 @@
 
 using namespace boost::asio;
 
-
-
 int main()
 {
-	std::cout<<"client start..."<<std::endl;
+	std::cout << "client start..." << std::endl;
 
 	io_service ios;
 	ip::tcp::socket socket(ios);
@@ -21,7 +19,7 @@ int main()
 	std::vector<char> v(100, 0);
 
 	size_t n = socket.read_some(buffer(v));
-	std::cout<<&v[0]<<std::endl;
+	std::cout << &v[0] << std::endl;
 
 	return 0;
 }
